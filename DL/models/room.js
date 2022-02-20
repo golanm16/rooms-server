@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 
-require("../db").connect();
-
 const roomSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -19,9 +17,11 @@ const roomSchema = new mongoose.Schema({
 
 const roomModel = mongoose.model("room", roomSchema);
 
-const test = {
-  name: "test",
-  maxOfPeople: 10,
-  value: 253,
-};
-roomModel.create();
+module.exports = roomModel;
+// const test = {
+//   name: "test",
+//   maxOfPeople: 10,
+//   value: 253,
+// };
+
+// roomModel.create(test);
