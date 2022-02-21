@@ -13,15 +13,10 @@ exports.connect = async () => {
           console.log("error connecting to mongoDB");
           return err;
         }
-        console.log(
-          "connected to mongoDB succefully\n",
-          mongoose.connection.readyState
-        );
+        console.log("connected to mongoDB succefully\n");
       }
     );
   } catch (e) {
     console.log("error connecting to mongoose");
   }
 };
-
-connectToDB();

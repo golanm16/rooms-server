@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
   isSubscribed: { type: Boolean },
   isRegistered: { type: Boolean },
   credits: { type: Object },
+  active: { type: Boolean, default: true },
 });
 
 module.exports = mongoose.model("user", userSchema);

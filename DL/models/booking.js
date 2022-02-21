@@ -11,6 +11,7 @@ const bookingSchema = new mongoose.Schema({
   calendarInviteLink: { type: String },
   cost: { type: Number },
   payedBy: { type: Object },
+  active: { type: Boolean, default: true },
 });
 
 module.exports = mongoose.model("booking", bookingSchema);

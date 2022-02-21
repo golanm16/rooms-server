@@ -13,15 +13,7 @@ const roomSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  active: { type: Boolean, default: true },
 });
 
-const roomModel = mongoose.model("room", roomSchema);
-
-module.exports = roomModel;
-// const test = {
-//   name: "test",
-//   maxOfPeople: 10,
-//   value: 253,
-// };
-
-// roomModel.create(test);
+module.exports = mongoose.model("room", roomSchema);
